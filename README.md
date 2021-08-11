@@ -99,8 +99,6 @@ src
 ### Code Showcase
 
 
-<<<<<<< HEAD
+
 ### Code Issues & Resolutions ``
-=======
-### Code Issues & Resolutions
->>>>>>> 0860b84702d18ad0e111ec199e9a78690e2cfef9
+
