@@ -4,10 +4,10 @@
 TheBarberShop is an app using React on Rails. I was inspired to created this for a friend's Barber Shop. A user will be able to create a profile and have the ability to select services. They can also create, edit , and delete appointment. 
 
 ## MVP
-- Back end Full CRUD
-- Full CRUD for Client for end
-- 8 Component 
-- Css with Flex Box or Grid
+- User can login and out
+- User can select a service
+- User can create a booking 
+- User can edit or delete a booking
 
 ## Libraries and Dependencies
 | Library | Description |                      
@@ -16,16 +16,17 @@ TheBarberShop is an app using React on Rails. I was inspired to created this for
 | React Router | npm i react-router-dom |
 | axios | npm i |
 | rails | bundle |
-| bcryt | uncomment in Gemfile then run bundle | 
+| bcrypt | uncomment in Gemfile then run bundle | 
 
 ## Client (Front End)
 
 ### WireFrames
-![Wireframe](https://user-images.githubusercontent.com/85528188/128965480-8f642a9c-3305-410d-ab2f-cae2ec59e5c7.png)
+[TheBarberShop.pdf](https://github.com/mnebot86/TheBarbershop/files/6970124/MetroCut.pdf)
+<img width="423" alt="new wire" src="https://user-images.githubusercontent.com/85528188/129070619-a62b1332-9ca7-40cc-b08e-eb20ee4090f4.png">
 
 ### Component Tree
 
-![alt text](read_me_pic/components.png)
+<img width="1305" alt="Screen Shot 2021-08-11 at 12 23 13 PM" src="https://user-images.githubusercontent.com/85528188/129066542-fcde20a5-0c02-45f2-8a94-a63e0c8177b2.png">
 
 ### Component File Structure
 
@@ -59,28 +60,32 @@ src
 
 | Task | Priority | Estimated Time | Time Invested | Actual Time |
 | :----| :--------: | :-----------: | :-----------: | :-----------------: |
-| WireFrame| H | 3 | 0 | 0 |
-| Component | H | 3.5 | 1.5 | 1.5 | 
+| WireFrame| H | 3 | 2 | 2 |
+| ERD | H | 1.5 | 1.5| 1.5|
+| Component Chart | H | 3.5 | 1.5 | 1.5 | 
 | File Structures | H | 1 | 1 | 1 |
-| Model | H | 2 | 0 | 0 |
-| Seeds | H | 2 | 0 | 0 |
+| Model | H | 2.5 | 0 | 0 |
+| Seeds | H | 2.5 | 0 | 0 |
 | Controllers | H | 3 | 0 | 0|
-| routes | H | 2 | 0 | 0 |
+| Routes | H | 2.5 | 0 | 0 |
+| Postman | H | 1.5 | 0 | 0 |
 | Screens | H | 2 | 0 | 0 |
-| Components | H | 2.5 | 0 | 0 |
+| Components| H| 1.5 | 0 | 0|
 | Services | H | 3 | 0 | 0 |
 | Auth | H | 3 | 0 | 0|
 | Testing | H | 3 | 0 | 0 |
 | Debugging | H | 3 | 0 | 0 |
 | Basic Css | H | 3 | 0 | 0 |
-| Animations | L | 3 | 0 | 0 |
+| Deployment | H | 2.5 | 0 | 0 |
+| Total |  40 |
 
 
 ## Server (Back End)
 
 ### ERD
 
-![alt text](read_me_pic/ERD.png)
+<img width="714" alt="New ERD" src="https://user-images.githubusercontent.com/85528188/129071060-56b478c1-c04c-4ac8-b36a-3efbe4c869fb.png">
+
 
 ### Post-MVP
 - Add a Barbers Table
@@ -88,8 +93,9 @@ src
 - Check Out Cart 
 - Barbers reviews
 - Live rendering Calender
+- Add Animation Effect to each page
 
 ### Code Showcase
 
 
-### Code Issues & Resolutions
+### Code Issues & Resolutions ``
