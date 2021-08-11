@@ -28,7 +28,7 @@ TheBarberShop is an app using React on Rails. I was inspired to created this for
 ![alt text](read_me_pic/components.png)
 
 ### Component File Structure
-
+```structure
 src
 |_components
     |_Layout
@@ -53,6 +53,7 @@ src
   |_client
   |_services
   |_booking    
+```
 
 
   ### TimeFrame
