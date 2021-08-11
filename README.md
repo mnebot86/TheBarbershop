@@ -29,7 +29,7 @@ TheBarberShop is an app using React on Rails. I was inspired to created this for
 <img width="1305" alt="Screen Shot 2021-08-11 at 12 23 13 PM" src="https://user-images.githubusercontent.com/85528188/129066542-fcde20a5-0c02-45f2-8a94-a63e0c8177b2.png">
 
 ### Component File Structure
-
+```structure
 src
 |_components
     |_Layout
@@ -54,6 +54,7 @@ src
   |_client
   |_services
   |_booking    
+```
 
 
   ### TimeFrame
@@ -98,4 +99,8 @@ src
 ### Code Showcase
 
 
+<<<<<<< HEAD
 ### Code Issues & Resolutions ``
+=======
+### Code Issues & Resolutions
+>>>>>>> 0860b84702d18ad0e111ec199e9a78690e2cfef9
