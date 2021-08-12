@@ -1,7 +1,7 @@
 import api from './apiConfig'
 
 export const signUp = async (clientData) => {
-  const res = await api.post(`/client`, { client: clientData } )
+  const res = await api.post(`/clients`, { client: clientData } )
   const { token } = res.data
   if (token) {
     localStorage.setItem(`authToken`, token)

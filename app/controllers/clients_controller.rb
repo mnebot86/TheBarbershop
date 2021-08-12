@@ -31,10 +31,11 @@ class ClientsController < ApplicationController
     client = Client.find_by(email: client_login_params[:email])
 
     if client && client.authenticate(client_login_params[:password])
+      token = create_token(client.id)
       render json: {
-               client: client.attributes.except("password_digest"),
-               token: token,
-             }, status: :ok
+        client: client.attributes.except("password_digest"),
+        token: token
+        }, status: :ok
     else
       render json: { error: "unauthorized" }, status: :unauthorized
     end

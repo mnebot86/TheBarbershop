@@ -26,7 +26,7 @@ const SignUp = (props) => {
       const { setClient } = props;
       const client = await signUp(form);
         setClient(client);
-        history.pushState("/home");
+        history.push("/home");
       };
     
   

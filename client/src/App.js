@@ -1,6 +1,6 @@
 import { Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Layout from "./components/Layout/Layout";
+
 import Splash from "./screens/Splash/Splash";
 import SignUp from "./screens/SignUp/SignUp";
 import SignIn from "./screens/SignIn/SignIn";
@@ -12,6 +12,7 @@ import Confirmation from "./screens/Confirmation/Confirmation";
 import BookingEdit from "./screens/BookingEdit/BookingEdit";
 import "./App.css";
 import { verify } from "./services/clients";
+import SignOut from "./screens/SignOut/SignOut";
 
 function App() {
   const [client, setClient] = useState(null)
@@ -31,10 +32,13 @@ fetchClient(
           <Splash client={client}/>
         </Route>
         <Route path="/signup">
-          <SignUp client={client}/>
+          <SignUp client={client} setClient={setClient}/>
         </Route>
         <Route path="/login">
-          <SignIn client={client}/>
+          <SignIn client={client} setClient={setClient}/>
+        </Route>
+        <Route exact path = "/signout">
+          < SignOut setClient={setClient}/>
         </Route>
         <Route path="/home">
           <Home client={client}/>
