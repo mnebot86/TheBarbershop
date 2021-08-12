@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Booking = () => {
+const Booking = (props) => {
+  
   return (
     <div>
-      
+      <form>
+        <input type="date" />
+        <input type="time"/>
+      </form>
     </div>
   );
 };

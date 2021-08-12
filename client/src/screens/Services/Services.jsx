@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getAllServices } from "../../services/services";
 import { Link } from "react-router-dom"
+import ServiceCard from "../../components/ServiceCard/ServiceCard";
 
 const Services = () => {
   const [services, setServices] = useState([]);
@@ -17,14 +18,14 @@ const Services = () => {
 
   return (
     <div >
-      <h1>Hello</h1>
-      {services.map((service) => (
-        <div key={service.id}>
-          <Link to="/details/:id">
-            <p>{service.name}</p>
-          </Link>
-            <p>${service.price}</p>
-        </div>
+      {services.map((service, index) => (
+        <ServiceCard 
+        id={ service.id }
+        image={ service.image_url }
+        name={ service.name }
+        price={ service.price }
+        description={ service.description }
+        key={ index }/>
       ))}
     </div>
   );
