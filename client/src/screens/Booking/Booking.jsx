@@ -5,14 +5,12 @@ const Booking = (props) => {
   
   return (
     <div>
-      <Layout>
-        <p>{props.name}</p>
+      <p>{props.name}</p>
         <form>
           <input type="date" />
           <input type="time" />
         </form>
-      </Layout>
-    </div>
+      </div>
   );
 };
 

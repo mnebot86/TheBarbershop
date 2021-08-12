@@ -3,7 +3,7 @@ import Nav from "../Nav/Nav";
 const Layout = (props) => {
   return (
     <div>
-      <Nav />
+      <Nav client={props.client}/>
       <div>{props.children}</div>
     </div>
   );

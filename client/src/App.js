@@ -1,6 +1,6 @@
 import { Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-
+import Layout from "./components/Layout/Layout";
 import Splash from "./screens/Splash/Splash";
 import SignUp from "./screens/SignUp/SignUp";
 import SignIn from "./screens/SignIn/SignIn";
@@ -28,7 +28,8 @@ fetchClient(
 
   return (
     <div>
-      <Route exact path="/">
+      <Layout client={client}>
+        <Route exact path="/">
           <Splash client={client}/>
         </Route>
         <Route path="/signup">
@@ -58,6 +59,7 @@ fetchClient(
         <Route exact path="/booking/edit/:id">
           <BookingEdit client={client}/>
         </Route>
+      </Layout>
       </div>
   );
 }
