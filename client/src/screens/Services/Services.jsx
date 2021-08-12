@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAllServices } from "../../services/services";
-import { Link } from "react-router-dom"
+import Layout from "../../components/Layout/Layout";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
 
 const Services = () => {
@@ -18,6 +18,7 @@ const Services = () => {
 
   return (
     <div >
+      <Layout services={services}>
       {services.map((service, index) => (
         <ServiceCard 
         id={ service.id }
@@ -27,6 +28,7 @@ const Services = () => {
         description={ service.description }
         key={ index }/>
       ))}
+      </Layout>
     </div>
   );
 };

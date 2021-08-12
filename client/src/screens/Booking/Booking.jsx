@@ -1,13 +1,17 @@
-import React from 'react';
+import Layout from "../../components/Layout/Layout";
 
 const Booking = (props) => {
+
   
   return (
     <div>
-      <form>
-        <input type="date" />
-        <input type="time"/>
-      </form>
+      <Layout>
+        <p>{props.name}</p>
+        <form>
+          <input type="date" />
+          <input type="time" />
+        </form>
+      </Layout>
     </div>
   );
 };

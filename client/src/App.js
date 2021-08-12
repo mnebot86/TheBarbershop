@@ -14,8 +14,7 @@ import "./App.css";
 function App() {
   return (
     <div>
-      <Layout>
-        <Route exact path="/">
+      <Route exact path="/">
           <Splash />
         </Route>
         <Route path="/signup">
@@ -42,8 +41,7 @@ function App() {
         <Route exact path="/booking/edit/:id">
           <BookingEdit />
         </Route>
-      </Layout>
-    </div>
+      </div>
   );
 }
 
