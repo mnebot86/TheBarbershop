@@ -1,4 +1,5 @@
 import { Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Layout from "./components/Layout/Layout";
 import Splash from "./screens/Splash/Splash";
 import SignUp from "./screens/SignUp/SignUp";
@@ -10,36 +11,48 @@ import Booking from "./screens/Booking/Booking";
 import Confirmation from "./screens/Confirmation/Confirmation";
 import BookingEdit from "./screens/BookingEdit/BookingEdit";
 import "./App.css";
+import { verify } from "./services/clients";
 
 function App() {
+  const [client, setClient] = useState(null)
+
+useEffect(() => {
+  const fetchClient = async () => {
+    const client = await verify()
+    client ? setClient(client) : setClient(null)
+  }
+fetchClient(
+
+)},[])
+
   return (
     <div>
       <Route exact path="/">
-          <Splash />
+          <Splash client={client}/>
         </Route>
         <Route path="/signup">
-          <SignUp />
+          <SignUp client={client}/>
         </Route>
         <Route path="/login">
-          <SignIn />
+          <SignIn client={client}/>
         </Route>
         <Route path="/home">
-          <Home />
+          <Home client={client}/>
         </Route>
         <Route exact path="/services">
-          <Services />
+          <Services client={client}/>
         </Route>
         <Route exact path="/services/:id">
-          <Detail />
+          <Detail client={client}/>
         </Route>
         <Route path="/booking">
-          <Booking />
+          <Booking client={client}/>
         </Route>
         <Route path="/confirmation">
-          <Confirmation />
+          <Confirmation client={client}/>
         </Route>
         <Route exact path="/booking/edit/:id">
-          <BookingEdit />
+          <BookingEdit client={client}/>
         </Route>
       </div>
   );
