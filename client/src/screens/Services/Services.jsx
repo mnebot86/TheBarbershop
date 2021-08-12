@@ -8,7 +8,7 @@ const Services = () => {
     const fetchServices = async () => {
       const allServices = await getAllServices();
       setServices(allServices);
-      console.log(allServices);
+      console.log("Services",allServices);
       console.log(services);
     };
     fetchServices();

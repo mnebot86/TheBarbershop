@@ -1,4 +1,4 @@
-import { Route } from 'react-router';
+import { Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import Splash from './screens/Splash/Splash';
 import SignUp from "./screens/SignUp/SignUp";
@@ -13,7 +13,10 @@ import './App.css';
 
 function App() {
   return (
-    <Layout>
+    <div>
+      <Layout>
+        
+      </Layout>
       <Route exact path="/">
         <Splash/>
       </Route>
@@ -41,11 +44,7 @@ function App() {
       <Route exact path="/booking/edit/:id">
         <BookingEdit />
       </Route>
-      
-
-
-
-    </Layout>
+    </div>
   );
 }
 
