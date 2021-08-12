@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAllServices } from "../../services/services";
+import { Link } from "react-router-dom"
 
 const Services = () => {
   const [services, setServices] = useState([]);
@@ -15,10 +16,15 @@ const Services = () => {
   }, []);
 
   return (
-    <div>
+    <div >
       <h1>Hello</h1>
       {services.map((service) => (
-        <p>{service.name}</p>
+        <div key={service.id}>
+          <Link to="/details/:id">
+            <p>{service.name}</p>
+          </Link>
+            <p>${service.price}</p>
+        </div>
       ))}
     </div>
   );
