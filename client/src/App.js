@@ -17,13 +17,13 @@ function App() {
       <Route exact path="/">
         <Splash/>
       </Route>
-      <Route exact path="/signup">
+      <Route  path="/signup">
         <SignUp/>
       </Route>
-      <Route exact path="/login">
+      <Route  path="/login">
         <SignIn/>
       </Route>
-      <Route exact path="/home">
+      <Route  path="/home">
         <Home />
       </Route>
       <Route exact path="/services">
@@ -32,13 +32,13 @@ function App() {
       <Route exact path="/detail/:id">
         <Detail/>
       </Route>
-      <Route exact path="/booking">
+      <Route  path="/booking">
         <Booking/>
       </Route>
-      <Route exact path="/confirmation">
+      <Route  path="/confirmation">
         <Confirmation/>
       </Route>
-      <Route exact path="/bookingedit/:id">
+      <Route exact path="/booking/edit/:id">
         <BookingEdit />
       </Route>
       
