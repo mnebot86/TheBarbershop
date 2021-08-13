@@ -6,7 +6,7 @@ const Confirmation = (props) => {
 
 const [booking, setBooking] = useState({
   date: new Date(),
-  client_id: props.client.id,
+  client_id: props.client?.id,
   service_id: props.service.id,
 })
 
@@ -16,9 +16,9 @@ let { id } = useParams()
 
 useEffect(() => {
   const fetchBooking = async () => {
-    const booking = await getOneBooking(id)
-    setBooking(booking)
-    console.log(booking)
+    const getBooking = await getOneBooking(id)
+    setBooking(getBooking)
+    console.log(typeof booking.date)
   }
   fetchBooking()
 },[id])
@@ -26,9 +26,10 @@ useEffect(() => {
 
   return (
     <div>
-      <h1>Confirmation</h1>
-      <p>{props.service.name}</p>
-      <p>{booking.date}</p>
+    <img src={props.client.image_url} alt={props.client.name} />
+    <p>Name: {props.client.name}</p>
+    <p>Appointment: {booking.date}</p>
+    <p>Service: {props.service.name}</p>
     </div>
   );
 };
