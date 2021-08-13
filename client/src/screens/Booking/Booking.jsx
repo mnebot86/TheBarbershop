@@ -11,7 +11,7 @@ const Booking = (props) => {
     client_id: props.client.id,
     service_id: props.service.id,
   });
-  console.log(props);
+ 
 
   const handleChange = () => {
     onChange(value);

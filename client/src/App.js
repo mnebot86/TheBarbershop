@@ -14,10 +14,12 @@ import "./App.css";
 import { verify } from "./services/clients";
 import SignOut from "./screens/SignOut/SignOut";
 import { getAllServices } from "./services/services";
+import { getAllBookings } from "./services/bookings";
 
 function App() {
-  const [client, setClient] = useState(null);
   const [service, setService] = useState({});
+  const [client, setClient] = useState(null);
+  const [booking, setBooking] = useState([])
 
   useEffect(() => {
     const fetchClient = async () => {
@@ -37,6 +39,13 @@ function App() {
     fetchServices();
   }, []);
 
+  useEffect(() => {
+    const fetchBooking = async () => {
+      const allBookings = await getAllBookings()
+      setBooking(allBookings);
+    }
+    fetchBooking()
+  },[])
   return (
     <div>
       <Layout client={client}>
@@ -53,7 +62,7 @@ function App() {
           <SignOut setClient={setClient} />
         </Route>
         <Route path="/home">
-          <Home client={client} />
+          <Home client={client} setClient={setClient}/>
         </Route>
         <Route exact path="/services">
           <Services services={services} />
@@ -73,10 +82,15 @@ function App() {
             setService={setService}
             setClient={setClient}
             client={client}
+            
           />
         </Route>
-        <Route path="/confirmation">
-          <Confirmation client={client} />
+        <Route path="/confirmation/:id">
+          <Confirmation 
+          client={client} 
+          booking={booking}
+          service={service}
+          id={booking.id}/>
         </Route>
         <Route exact path="/booking/edit/:id">
           <BookingEdit client={client} />

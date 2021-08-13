@@ -7,7 +7,7 @@ export const getAllBookings = async () => {
 }
 
 export const getOneBooking = async (bookingID) => {
-  const res = await api.get(`/booking/${bookingID}`)
+  const res = await api.get(`/bookings/${bookingID}`)
   return res.data
 }
 
