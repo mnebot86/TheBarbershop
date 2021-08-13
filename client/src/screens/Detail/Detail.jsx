@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import { getOneService } from "../../services/services";
 import { Link } from "react-router-dom"
 
-const Detail = () => {
-  const [service, setService] = useState({});
+const Detail = ({setService, service}) => {
+  
   const { id } = useParams();
 
   useEffect(() => {
