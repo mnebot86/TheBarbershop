@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import DateTimePicker from "react-datetime-picker";
-import { createBooking } from "../../services/bookings";
+import { updateBooking } from "../../services/bookings";
 import { useHistory, useParams } from "react-router-dom";
 
 const BookingEdit = (props) => {
@@ -20,7 +20,7 @@ const BookingEdit = (props) => {
       date: value,
     };
 
-    const newBooking = await createBooking(bookingData);
+    const newBooking = await updateBooking(id,bookingData);
     console.log(bookingData);
     history.push(`/confirmation/${newBooking.id}`);
   };
