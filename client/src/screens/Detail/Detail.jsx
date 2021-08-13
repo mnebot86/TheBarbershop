@@ -17,13 +17,13 @@ const Detail = ({setService, service}) => {
   return (
     <div>
       <div>
-        <img src={service.image_url} alt="haircuts" />
-        <h1>{service.name}</h1>
+        <img src={service?.image_url} alt="haircuts" />
+        <h1>{service?.name}</h1>
         <p>${service.price}</p>
         <p>{service.description}</p>
       </div>
       <div>
-        <Link to={`/booking`}>
+        <Link to={`/booking/services/${service.id}`}>
         <button>Book!</button>
         </Link>
       </div>

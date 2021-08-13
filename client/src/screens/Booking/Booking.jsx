@@ -1,27 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DateTimePicker from "react-datetime-picker";
 import { createBooking } from "../../services/bookings";
-import { useHistory } from "react-router";
+import { useHistory ,useParams} from "react-router-dom";
 
 const Booking = (props) => {
   const history = useHistory();
   const [value, onChange] = useState(new Date());
-  const [formData, setFormData] = useState({
-    date: new Date(),
-    client_id: props.client.id,
-    service_id: props.service.id,
-  });
+  const { id } = useParams()
  
-
-  const handleChange = () => {
-    onChange(value);
-    setFormData({ ...formData, date: value });
-  };
+  useEffect(() => {
+    props.setService(props.services?.find((s) => s.id === parseInt(id)))
+  },[])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const newBooking = await createBooking(formData);
-
+    const bookingData = {
+    client_id: props.client?.id,
+    service_id: id,
+      date: value,
+    };
+    const newBooking = await createBooking(bookingData);
     history.push(`/confirmation/${newBooking.id}`);
   };
 
@@ -31,8 +29,8 @@ const Booking = (props) => {
       <form onSubmit={handleSubmit}>
         <label htmlFor="date">Appointment: </label>
         <DateTimePicker
-          onChange={handleChange}
-          value={formData.date}
+          onChange={onChange}
+          value={value}
           name="date"
           id="date"
         />

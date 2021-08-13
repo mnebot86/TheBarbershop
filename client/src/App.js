@@ -75,7 +75,7 @@ function App() {
             setService={setService}
           />
         </Route>
-        <Route path="/booking">
+        <Route exact path="/booking/services/:id">
           <Booking
             services={services}
             service={service}
@@ -85,15 +85,21 @@ function App() {
             
           />
         </Route>
-        <Route path="/confirmation/:id">
+        <Route exact path="/confirmation/:id">
           <Confirmation 
           client={client} 
           booking={booking}
           service={service}
           id={booking.id}/>
         </Route>
-        <Route exact path="/booking/edit/:id">
-          <BookingEdit client={client} />
+        <Route exact path="/booking/:id/edit">
+          <BookingEdit 
+            client={client}
+            services={services}
+            service={service}
+            setService={setService}
+            setClient={setClient}
+            booking={booking}/>
         </Route>
       </Layout>
     </div>
