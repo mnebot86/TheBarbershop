@@ -1,7 +1,8 @@
 import "./Splash.css";
+import { Link } from "react-router-dom"
 import movie from "../Home/images/mixkit-young-man-in-profile-while-having-his-hair-cut-36414-medium.mp4";
 
-function Splash(props) {
+function Splash() {
   return (
     <div className="splash">
       <video playInline autoPlay muted loop playbackRate="0.5" id="bgVid">
@@ -9,9 +10,15 @@ function Splash(props) {
       </video>
       <div className='splash-container'>
         <p className="splash-title">TheBarberShop</p>
-        <button className="sign-up splash-button">Sign up</button>
-        <button className="login splash-button">Login</button>
-        <button className="guest">Guest</button>
+        <Link to = "/signup">
+        <button className="sign-up splash-button color">Sign up</button>
+        </Link>
+        <Link to = "/login">
+        <button className="login splash-button color">Login</button>
+        </Link>
+        <Link to = "/home">
+        <button className="guest color">Guest</button>
+        </Link>
       </div>
     </div>
   );

@@ -1,11 +1,22 @@
 
+.color{transition: color 500ms ease-in;}
+
 .guest{
   border: none;
   background: inherit;
   color: #fff;
   font-weight: 700;
   font-size: 3.5rem;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  animation: slide-right 800ms ease-in 250ms 1 forwards;
 }
+@keyframes slide-right {
+  from{opacity: 0; transform: translateX(100px);}
+  to{opacity: 1; transform: translateX(0);}
+}
+
+.color:hover { color: red; }
 
 .splash{
   display: flex;
@@ -15,12 +26,19 @@
 }
 
 .splash-button {
-  width: 17rem;
-  height: 6rem;
-  color: #ffff;
   background: #002E7E;
+  color: #ffff;
   font-size: 3rem;
+  height: 6rem;
+  opacity: 0;
+  width: 17rem;
+  animation: slide 800ms ease-in 250ms 1 forwards;
 }
+@keyframes slide {
+  from{opacity: 0; transform: translateX(-100px);}
+  to{opacity: 1; transform: translateX(0);}
+}
+
 .splash-container{
   display: flex;
   align-items: center;
@@ -32,12 +50,18 @@
   top: 30%;
 }
 .splash-title{
-  z-index: 1;
-  font-size: 8rem;
   color: white;
+  font-size: 8rem;
+  opacity: 0;
+  z-index: 1;
   
+  animation: fade 800ms ease-in 250ms 1 forwards;
 }
 
+@keyframes fade {
+  from{opacity: 0; transform: translateY(-100px);}
+  to{opacity: 1; transform: translateY(0);}
+}
 video {
   position: relative;
   object-fit:cover;
