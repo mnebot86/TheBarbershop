@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
 
   resources :services, only: [:index, :show]
+  put "booking/:id", to: "bookings#update"
   resources :bookings
 end

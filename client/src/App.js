@@ -19,7 +19,7 @@ import { getAllBookings } from "./services/bookings";
 function App() {
   const [service, setService] = useState({});
   const [client, setClient] = useState(null);
-  const [booking, setBooking] = useState([])
+  const [booking, setBooking] = useState([]);
 
   useEffect(() => {
     const fetchClient = async () => {
@@ -41,67 +41,60 @@ function App() {
 
   useEffect(() => {
     const fetchBooking = async () => {
-      const allBookings = await getAllBookings()
+      const allBookings = await getAllBookings();
       setBooking(allBookings);
-    }
-    fetchBooking()
-  },[])
+    };
+    fetchBooking();
+  }, []);
   return (
     <div>
-      <Layout client={client}>
-        <Route exact path="/">
-          <Splash client={client} />
-        </Route>
-        <Route path="/signup">
-          <SignUp client={client} setClient={setClient} />
-        </Route>
-        <Route path="/login">
-          <SignIn client={client} setClient={setClient} />
-        </Route>
-        <Route exact path="/signout">
-          <SignOut setClient={setClient} />
-        </Route>
-        <Route path="/home">
-          <Home client={client} setClient={setClient}/>
-        </Route>
-        <Route exact path="/services">
-          <Services services={services} />
-        </Route>
-        <Route exact path="/services/:id">
-          <Detail
-            client={client}
-            services={services}
-            service={service}
-            setService={setService}
-          />
-        </Route>
-        <Route exact path="/booking/services/:id">
-          <Booking
-            services={services}
-            service={service}
-            setService={setService}
-            setClient={setClient}
-            client={client}
-            
-          />
-        </Route>
-        <Route exact path="/confirmation/:id">
-          <Confirmation 
-          client={client} 
-          booking={booking}
+      <Route exact path="/">
+        <Splash client={client} />
+      </Route>
+      <Route exact path="/signup">
+        <SignUp client={client} setClient={setClient} />
+      </Route>
+      <Route exact path="/login">
+        <SignIn client={client} setClient={setClient} />
+      </Route>
+      <Route exact path="/signout">
+        <SignOut setClient={setClient} />
+      </Route>
+      <Route exact path="/home">
+        <Home client={client} setClient={setClient} />
+      </Route>
+      <Route exact path="/services">
+        <Services services={services} />
+      </Route>
+      <Route exact path="/services/:id">
+        <Detail
+          client={client}
+          services={services}
           service={service}
-          id={booking.id}/>
-        </Route>
-        <Route exact path="/booking/:id/edit">
-          <BookingEdit 
-            client={client}
-            services={services}
-            service={service}
-            setService={setService}
-            setClient={setClient}
-            booking={booking}/>
-        </Route>
-      </Layout>
+          setService={setService}
+        />
+      </Route>
+      <Route exact path="/booking/services/:id">
+        <Booking
+          services={services}
+          service={service}
+          setService={setService}
+          setClient={setClient}
+          client={client}
+        />
+      </Route>
+      <Route exact path="/confirmation/:id">
+        <Confirmation client={client} booking={booking} service={service} />
+      </Route>
+      <Route exact path="/booking/:id/edit">
+        <BookingEdit
+          client={client}
+          services={services}
+          service={service}
+          setService={setService}
+          setClient={setClient}
+        />
+      </Route>
     </div>
   );
 }

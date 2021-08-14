@@ -1,6 +1,3 @@
-import { useEffect, useState } from "react";
-import { getAllServices } from "../../services/services";
-import Layout from "../../components/Layout/Layout";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
 
 const Services = (props) => {

@@ -6,11 +6,12 @@ import { useHistory ,useParams} from "react-router-dom";
 const Booking = (props) => {
   const history = useHistory();
   const [value, onChange] = useState(new Date());
+  
   const { id } = useParams()
  
   useEffect(() => {
     props.setService(props.services?.find((s) => s.id === parseInt(id)))
-  },[])
+  },[id, props])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,6 +22,7 @@ const Booking = (props) => {
     };
     const newBooking = await createBooking(bookingData);
     history.push(`/confirmation/${newBooking.id}`);
+    console.log('TIme',bookingData?.date)
   };
 
   return (

@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getOneService } from "../../services/services";
 import { Link } from "react-router-dom"
 
-const Detail = ({setService, service}) => {
+const Detail = ({setService, service, client}) => {
   
   const { id } = useParams();
 
@@ -13,7 +13,7 @@ const Detail = ({setService, service}) => {
       setService(service);
     };
     fetchService();
-  }, []);
+  }, [id, setService]);
   return (
     <div>
       <div>
@@ -23,9 +23,12 @@ const Detail = ({setService, service}) => {
         <p>{service.description}</p>
       </div>
       <div>
-        <Link to={`/booking/services/${service.id}`}>
+        {client ? <Link to={`/booking/services/${service.id}`}>
         <button>Book!</button>
-        </Link>
+        </Link> : <Link to={`/signup`}>
+        <button>Book!</button>
+        </Link>}
+        
       </div>
     </div>
   );

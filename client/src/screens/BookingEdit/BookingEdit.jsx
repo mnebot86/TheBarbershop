@@ -1,37 +1,48 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import DateTimePicker from "react-datetime-picker";
-import { updateBooking } from "../../services/bookings";
+import { deleteBooking, updateBooking } from "../../services/bookings";
 import { useHistory, useParams } from "react-router-dom";
 
 const BookingEdit = (props) => {
+
   const history = useHistory();
   const [value, onChange] = useState(new Date());
-  const { id } = useParams();
-  console.log(props.booking)
-  useEffect(() => {
-    props.setService(props.services?.find((s) => s.id === parseInt(id)));
-  }, []);
+  const [booking, setBooking] = useState({
+    date: value,
+    client_id: props.client?.id,
+    service_id: '',
+  });
+
+  let { id } = useParams();
+
+  const handleChange = (e) => {
+    const { value } = e.target;
+    setBooking({
+      ...booking,
+      service_id: value,
+      
+    });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const bookingData = {
-      client_id: props.client?.id,
-      service_id: id,
-      date: value,
-    };
-
-    const newBooking = await updateBooking(id,bookingData);
-    console.log(bookingData);
-    history.push(`/confirmation/${newBooking.id}`);
+    const updatedBooking = await updateBooking(id, booking);
+    console.log(updatedBooking);
+    history.go(-1)
   };
 
+  const handleDelete = async (e) => {
+    e.preventDefault();
+    await deleteBooking(id);
+    history.push("/home");
+  };
   return (
     <div>
       <form onSubmit={handleSubmit}>
-      <select>
-        {props.services.map((service) =>(
-          <option value={service.name}>{service.name}</option>
-        ))}
+        <select value={props.service?.name} onChange={handleChange}>
+          {props.services.map((service) => (
+            <option value={service.id}>{service.name}</option>
+          ))}
         </select>
         <label htmlFor="date">Appointment: </label>
         <DateTimePicker
@@ -40,8 +51,11 @@ const BookingEdit = (props) => {
           name="date"
           id="date"
         />
-        <button type="submit">Good Choice</button>
+        <button type="submit">Submit</button>
       </form>
+      <button type="submit" onClick={(e) => handleDelete(e)}>
+        Delete
+      </button>
     </div>
   );
 };

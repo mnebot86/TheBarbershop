@@ -1,5 +1,4 @@
 import React from "react";
-import Layout from "../../components/Layout/Layout";
 import { useState } from "react";
 import { signUp } from "../../services/clients";
 import { useHistory } from "react-router-dom";

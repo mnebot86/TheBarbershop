@@ -26,7 +26,7 @@ before_action :authorize_request, only: [:update, :create, :destroy]
     if @booking.update(booking_params)
       render json: @booking, status: :ok
     else
-      render json: booking.errors, status: :unprocessable_entity
+      render json: @booking.errors, status: :unprocessable_entity
     end
   end
 

@@ -1,10 +1,12 @@
-const Home = () => {
+import Layout from "../../components/Layout/Layout";
+
+const Home = (props) => {
 
 return (
 
-    <div>
+    <Layout client={props.client}>
       <h1>Home</h1>
-    </div>
+    </Layout>
   );
 };
 

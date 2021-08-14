@@ -16,12 +16,12 @@ export const createBooking = async (bookingData) => {
   return res.data
 }
 
-export const updateBooking = async (bookingID, bookingData) => {
-  const res = await api.put(`/booking/${ bookingID }`, { booking: bookingData})
+export const updateBooking = async (id, bookingData) => {
+  const res = await api.put(`/booking/${ id }`, { booking: bookingData})
   return res.data
 }
 
 export const deleteBooking = async (bookingID) => {
-  const res = await api.delete(`/booking/${ bookingID }`)
+  const res = await api.delete(`/bookings/${ bookingID }`)
   return res.data
 }
