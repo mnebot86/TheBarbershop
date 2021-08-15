@@ -1,24 +1,32 @@
 .homeBg {
-  background: url(../../screens/Home/images/homepage.jpeg);
+  background: url(../../screens/Home/images/homepage.jpeg) ;
+  background-blend-mode: multiply;
   background-size: cover;
   min-width: 100vw;
   min-height: 100vh;
-  position:absolute;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.container {
-position: absolute;
-background-color: black;
-opacity: .5;
-min-width: 100vw;
-min-height:100vh;
+.wordBg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: RGBA(0,0,0,0.70);
+  min-width: 60%;
+  min-height: 60%;
+  
+}
+.word-wrap {
+  min-width: 90%;
+  color: #fff;
+  font-size: rem;
+  line-height: 1.5;
 }
 
-.word-wrap {
-position: relative;
-color: #fff;
-opacity: 1;
+span {
+font-style: italic;
 }
