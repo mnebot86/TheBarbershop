@@ -6,14 +6,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: red; */
 }
 
 .container {
   display: flex;
-  border: 1px solid red;
-  width: 145rem;
-  height: 50rem;
+  max-width: 145rem;
+  max-height: 50rem;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 img {
@@ -23,13 +22,238 @@ img {
 
 .word-wrap{
   margin: 0 auto;
-  background-color: red;
   align-self: center;
-  width: 50rem;
-  height: 300px;
+  max-width: 45%;
+  height: 100%;
   justify-content: space-evenly;
   justify-self: center;
   display: flex;
   flex-direction: column;
   font-size: 4rem;
+}
+
+.btn {
+  display:flex;
+  justify-content: center;
+  
+}
+
+.btn button {
+  background: #002E7E;
+  color: #ffff;
+  font-size: 3rem;
+  height: 6rem;
+  width: 17rem;
+}
+
+
+
+
+@media screen and (max-width:1200px){
+  .details {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    display: flex;
+    width: 90vw;
+    height: 60vw;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  }
+  
+  img {
+    max-width: 45%;
+    height: 100%;
+  }
+  
+  .word-wrap{
+    margin: 0 auto;
+    align-self: center;
+    max-width: 45%;
+    height: 100%;
+    justify-content: space-evenly;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+  }
+  
+  .btn {
+    display:flex;
+    justify-content: center;
+    
+  }
+  
+  .btn button {
+    background: #002E7E;
+    color: #ffff;
+    font-size: 3rem;
+    height: 6rem;
+    width: 17rem;
+  }  
+}
+
+@media screen and (max-width:1024px){
+  .details {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    display: flex;
+    width: 90vw;
+    height: 60vw;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  }
+  
+  img {
+    max-width: 45%;
+    height: 100%;
+  }
+  
+  .word-wrap{
+    margin: 0 auto;
+    align-self: center;
+    max-width: 45%;
+    height: 100%;
+    justify-content: space-evenly;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+  }
+  
+  .btn {
+    display:flex;
+    justify-content: center;
+    
+  }
+  
+  .btn button {
+    background: #002E7E;
+    color: #ffff;
+    font-size: 3rem;
+    height: 6rem;
+    width: 17rem;
+  }  
+}
+
+@media screen and (max-width:768px){
+  .details {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    display: flex;
+    width: 75vw;
+    height: 60vh;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  }
+  
+  img {
+    max-width: 45%;
+    height: 100%;
+  }
+  
+  .word-wrap{
+    margin: 0 auto;
+    align-self: center;
+    max-width: 45%;
+    height: 100%;
+    justify-content: space-evenly;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+  }
+  
+  .btn {
+    display:flex;
+    justify-content: center;
+    
+  }
+  
+  .btn button {
+    background: #002E7E;
+    color: #ffff;
+    font-size: 1.8rem;
+    height: 6rem;
+    width: 12rem;
+  }
+  
+}
+
+@media screen and (max-width:480px){
+  .details {
+    position: absolute;
+    width: 100%;
+    min-width: 260px;
+    height: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  }
+  
+  img {
+    min-width: 206px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .word-wrap{
+    margin: 0 auto;
+    align-self: center;
+    width: 100%;
+    min-width: 206px;
+    height: 100%;
+    justify-content: space-evenly;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+  }
+  
+  .btn {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    
+  }
+  
+  .btn button {
+    background: #002E7E;
+    color: #ffff;
+    font-size: 1.2rem;
+    height: 4rem;
+    width: 9rem;
+  }
+  
 }

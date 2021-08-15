@@ -1,7 +1,24 @@
 .homeBg {
   background: url(../../screens/Home/images/homepage.jpeg);
   background-size: cover;
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  position:absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.container {
+position: absolute;
+background-color: black;
+opacity: .5;
+min-width: 100vw;
+min-height:100vh;
+}
+
+.word-wrap {
+position: relative;
+color: #fff;
+opacity: 1;
 }
