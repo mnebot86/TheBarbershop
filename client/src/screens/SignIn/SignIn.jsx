@@ -1,7 +1,8 @@
 import { useHistory } from "react-router-dom";
 import { login } from "../../services/clients";
 import { useState } from "react";
-
+import Layout from "../../components/Layout/Layout";
+import "./SignIn.css";
 const SignIn = (props) => {
   const history = useHistory();
 
@@ -27,26 +28,32 @@ const SignIn = (props) => {
 
   const { email, password } = form;
   return (
-    <div>
-      <form onSubmit={onSignIn}>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          name="email"
-          onChange={handleChange}
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          name="password"
-          onChange={handleChange}
-        />
-        <button type="submit">Sign In</button>
-      </form>
+    <div className="sign-in">
+      <Layout>
+        <form className="sign-in-form" onSubmit={onSignIn}>
+          <div className="sign-in-inner">
+            <input
+              className="sign-up-inputs"
+              placeholder="Email"
+              type="email"
+              id="email"
+              value={email}
+              name="email"
+              onChange={handleChange}
+            />
+            <input
+              className="sign-up-inputs"
+              placeholder="Password"
+              type="password"
+              id="password"
+              value={password}
+              name="password"
+              onChange={handleChange}
+            />
+            <button type="submit">Sign In</button>
+          </div>
+        </form>
+      </Layout>
     </div>
   );
 };

@@ -2,8 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { signUp } from "../../services/clients";
 import { useHistory } from "react-router-dom";
-import Layout from "../../components/Layout/Layout"
-import './SignUp.css'
+import Layout from "../../components/Layout/Layout";
+import "./SignUp.css";
 
 const SignUp = (props) => {
   const history = useHistory();
@@ -32,43 +32,59 @@ const SignUp = (props) => {
 
   const { name, email, password, image_url } = form;
   return (
-    <Layout>
-      <form onSubmit={onSignUp}>
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          value={name}
-          name="name"
-          onChange={handleChange}
-        />
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          name="email"
-          onChange={handleChange}
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          name="password"
-          onChange={handleChange}
-        />
-        <label htmlFor="image_url">Picture</label>
-        <input
-          type="url"
-          id="image_url"
-          value={image_url}
-          name="image_url"
-          onChange={handleChange}
-        />
-        <button type="submit">Sign Up</button>
-      </form>
-    </Layout>
+    <div className="sign-up">
+      <Layout>
+        <form className="sign-up-form" onSubmit={onSignUp}>
+          <div className="sign-up-inner">
+            <div className="sign-up-name">
+              <input
+                placeholder="Name"
+                className="sign-up-inputs"
+                type="text"
+                id="name"
+                value={name}
+                name="name"
+                onChange={handleChange}
+              />
+            </div>
+            <div className="sign-up-email">
+              <input
+                placeholder="Email"
+                className="sign-up-inputs"
+                type="email"
+                id="email"
+                value={email}
+                name="email"
+                onChange={handleChange}
+              />
+            </div>
+            <div className="sign-up-password">
+              <input
+                placeholder="Password"
+                className="sign-up-inputs"
+                type="password"
+                id="password"
+                value={password}
+                name="password"
+                onChange={handleChange}
+              />
+            </div>
+            <div className="sign-up-picture">
+              <input
+                placeholder="Picture URL"
+                className="sign-up-inputs"
+                type="url"
+                id="image_url"
+                value={image_url}
+                name="image_url"
+                onChange={handleChange}
+              />
+            </div>
+            <button type="submit">Sign Up</button>
+          </div>
+        </form>
+      </Layout>
+    </div>
   );
 };
 export default SignUp;
