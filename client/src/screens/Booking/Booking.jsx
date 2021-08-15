@@ -3,7 +3,7 @@ import DateTimePicker from "react-datetime-picker";
 import { createBooking } from "../../services/bookings";
 import { useHistory, useParams } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
-
+import "./Booking.css";
 const Booking = (props) => {
   const history = useHistory();
   const [value, onChange] = useState(new Date());
@@ -29,17 +29,25 @@ const Booking = (props) => {
   return (
     <div className="booking">
       <Layout>
-        <div className='container'>
-          <p>Service: {props.service?.name}</p>
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="date">Appointment: </label>
-            <DateTimePicker
-              onChange={onChange}
-              value={value}
-              name="date"
-              id="date"
-            />
-            <button type="submit">Good Choice</button>
+        <div className="booking-container">
+          <form className="booking-form" onSubmit={handleSubmit}>
+            <div className="booking-name">
+              <p>Service: {props.service?.name}</p>
+            </div>
+            <div>
+              <label htmlFor="date">Appointment: </label>
+              <DateTimePicker
+                autoFocus
+                className="booking-input"
+                onChange={onChange}
+                value={value}
+                name="date"
+                id="date"
+              />
+            </div>
+            <button id="booking-btn" type="submit">
+              Book It
+            </button>
           </form>
         </div>
       </Layout>
