@@ -18,13 +18,13 @@ const Detail = ({ setService, service, client }) => {
   return (
     <Layout>
 ƒ<div className="details">
-      <div className="container">
+      <div className="details-container">
         <img src={service?.image_url} alt="haircuts" />
-        <div className="word-wrap">
+        <div className="details-word-wrap">
           <h1>{service?.name}</h1>
           <p>${service.price}</p>
           <p>{service.description}</p>
-      <div className="btn">
+      <div className="details-btn">
         {client ? (
           <Link to={`/booking/services/${service.id}`}>
             <button>Book!</button>

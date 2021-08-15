@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.container {
+.details-container {
   display: flex;
   max-width: 145rem;
   max-height: 50rem;
@@ -20,7 +20,7 @@ img {
   height: 100%;
 }
 
-.word-wrap{
+.details-word-wrap{
   margin: 0 auto;
   align-self: center;
   max-width: 45%;
@@ -32,13 +32,13 @@ img {
   font-size: 4rem;
 }
 
-.btn {
+.details-btn {
   display:flex;
   justify-content: center;
   
 }
 
-.btn button {
+.details-btn details-button {
   background: #002E7E;
   color: #ffff;
   font-size: 3rem;
@@ -60,7 +60,7 @@ img {
     align-items: center;
   }
   
-  .container {
+  .details-container {
     display: flex;
     width: 90vw;
     height: 60vw;
@@ -72,7 +72,7 @@ img {
     height: 100%;
   }
   
-  .word-wrap{
+  .details-word-wrap{
     margin: 0 auto;
     align-self: center;
     max-width: 45%;
@@ -84,13 +84,13 @@ img {
     font-size: 3rem;
   }
   
-  .btn {
+  .details-btn {
     display:flex;
     justify-content: center;
     
   }
   
-  .btn button {
+  .details-btn button {
     background: #002E7E;
     color: #ffff;
     font-size: 3rem;
@@ -110,7 +110,7 @@ img {
     align-items: center;
   }
   
-  .container {
+  .details-container {
     display: flex;
     width: 90vw;
     height: 60vw;
@@ -122,7 +122,7 @@ img {
     height: 100%;
   }
   
-  .word-wrap{
+  .details-word-wrap{
     margin: 0 auto;
     align-self: center;
     max-width: 45%;
@@ -134,13 +134,13 @@ img {
     font-size: 3rem;
   }
   
-  .btn {
+  .details-btn {
     display:flex;
     justify-content: center;
     
   }
   
-  .btn button {
+  .details-btn button {
     background: #002E7E;
     color: #ffff;
     font-size: 3rem;
@@ -160,7 +160,7 @@ img {
     align-items: center;
   }
   
-  .container {
+  .details-container {
     display: flex;
     width: 75vw;
     height: 60vh;
@@ -172,7 +172,7 @@ img {
     height: 100%;
   }
   
-  .word-wrap{
+  .details-word-wrap{
     margin: 0 auto;
     align-self: center;
     max-width: 45%;
@@ -184,13 +184,13 @@ img {
     font-size: 1.8rem;
   }
   
-  .btn {
+  .details-btn {
     display:flex;
     justify-content: center;
     
   }
   
-  .btn button {
+  .details-btn button {
     background: #002E7E;
     color: #ffff;
     font-size: 1.8rem;
@@ -213,7 +213,7 @@ img {
     align-items: center;
   }
   
-  .container {
+  .details-container {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -228,7 +228,7 @@ img {
     height: 100%;
   }
   
-  .word-wrap{
+  .details-word-wrap{
     margin: 0 auto;
     align-self: center;
     width: 100%;
@@ -241,14 +241,14 @@ img {
     font-size: 1.2rem;
   }
   
-  .btn {
+  .details-btn {
     display:flex;
     justify-content: center;
     flex-direction: column;
     
   }
   
-  .btn button {
+  .details-btn button {
     background: #002E7E;
     color: #ffff;
     font-size: 1.2rem;

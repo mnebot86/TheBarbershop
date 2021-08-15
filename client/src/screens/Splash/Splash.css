@@ -1,5 +1,6 @@
 
 .color{transition: color 500ms ease-in;}
+.color:hover { color: red; }
 
 .guest{
   border: none;
@@ -16,7 +17,6 @@
   to{opacity: 1; transform: translateX(0);}
 }
 
-.color:hover { color: red; }
 
 .splash{
   display: flex;

@@ -5,8 +5,8 @@ const Home = (props) => {
   return (
     <Layout client={props.client}>
       <div className="homeBg">
-        <div className="wordBg">
-          <p className="word-wrap">
+        <div className="home-wordBg">
+          <p className="home-word-wrap">
             <span>TheBarberShop...</span>is your one shop stop, for the freshes hair style and
             cuts.
           </p>
