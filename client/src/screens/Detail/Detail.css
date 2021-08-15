@@ -1,0 +1,35 @@
+.details {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+}
+
+.container {
+  display: flex;
+  border: 1px solid red;
+  width: 145rem;
+  height: 50rem;
+}
+
+img {
+  max-width: 45%;
+  height: 100%;
+}
+
+.word-wrap{
+  margin: 0 auto;
+  background-color: red;
+  align-self: center;
+  width: 50rem;
+  height: 300px;
+  justify-content: space-evenly;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 4rem;
+}

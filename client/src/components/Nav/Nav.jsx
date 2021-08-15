@@ -1,7 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { MdClose } from "react-icons/md"
+import { FiMenu } from "react-icons/fi"
+import { useState, useEffect } from "react";
+import Menu from "../Menu/Menu";
 import "./Nav.css";
 
 const Nav = (props) => {
+  const [open, setOpen] = useState(false);
+
   const unauthenticated = (
     <>
       <Link to="/signup">Sign Up</Link>
@@ -16,21 +22,50 @@ const Nav = (props) => {
 
       <Link to="/signout">Sign Out</Link>
 
-      <p>{props.client?.name}</p>
+      <li className="user-name">{props.client?.name}</li>
     </>
   );
+  const handleToggle = () => {
+    setOpen(!open);
+  };
 
+  const closeMenu = () => {
+    setOpen(false);
+  };
+
+ 
   return (
     <div>
-      <nav>
-        <h1 className>TheBarberShop</h1>
-        <li>
-          <Link to="/home">Home</Link>
-        </li>
-        <li>
-          <Link to="/services">Services</Link>
-        </li>
-        <li>{props.client ? authenticated : unauthenticated}</li>
+      <nav className="navBar navBar2">
+        <button id='hamburger' onClick={handleToggle}>{open ? (<MdClose style={{ color: 
+        '#fff', width: "4rem", height: "4rem"}}/>
+  ) : (
+    <FiMenu style={{color: "#7b7b7b", width: "4rem", height: "4rem"}} />
+  )}
+  </button>
+        <ul id="menuNav2" className={`menuNav ${open ? "showMenu" : ""}`}>
+          <li>
+            <Link
+              to="/home"
+              activeClassName="active-link"
+              onClick={() => closeMenu()}
+              exact
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/services"
+              activeClassName="active-link"
+              onClick={() => closeMenu()}
+              exact
+            >
+              Services
+            </Link>
+          </li>
+          <li>{props.client ? authenticated : unauthenticated}</li>
+        </ul>
       </nav>
     </div>
   );

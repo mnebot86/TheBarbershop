@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getOneService } from "../../services/services";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import "./Detail.css";
 
-const Detail = ({setService, service, client}) => {
-  
+const Detail = ({ setService, service, client }) => {
   const { id } = useParams();
 
   useEffect(() => {
@@ -15,20 +15,25 @@ const Detail = ({setService, service, client}) => {
     fetchService();
   }, [id, setService]);
   return (
-    <div>
-      <div>
+    <div className="details">
+      <div className="container">
         <img src={service?.image_url} alt="haircuts" />
-        <h1>{service?.name}</h1>
-        <p>${service.price}</p>
-        <p>{service.description}</p>
+        <div className="word-wrap">
+          <h1>{service?.name}</h1>
+          <p>${service.price}</p>
+          <p>{service.description}</p>
+        </div>
       </div>
       <div>
-        {client ? <Link to={`/booking/services/${service.id}`}>
-        <button>Book!</button>
-        </Link> : <Link to={`/signup`}>
-        <button>Book!</button>
-        </Link>}
-        
+        {client ? (
+          <Link to={`/booking/services/${service.id}`}>
+            <button>Book!</button>
+          </Link>
+        ) : (
+          <Link to={`/signup`}>
+            <button>Book!</button>
+          </Link>
+        )}
       </div>
     </div>
   );
