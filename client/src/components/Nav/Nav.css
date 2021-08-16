@@ -3,6 +3,7 @@
 }
 
 .navBar button {
+  display: none;
   background: transparent;
   border: none;
   position: fixed;
@@ -113,6 +114,7 @@
   }
 
   .navBar button {
+    display: block;
     background: transparent;
     border: none;
     position: fixed;
