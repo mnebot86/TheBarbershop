@@ -1,15 +1,23 @@
 import { useParams, Link, useHistory } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Layout from "../../components/Layout/Layout";
-import { deleteBooking } from "../../services/bookings";
+import { deleteBooking, getOneBooking } from "../../services/bookings";
 import "./Confirmation.css";
 
 const Confirmation = (props) => {
+  const [booking, setBooking]= useState({})
+
   const history = useHistory();
-  const booking = {
-    date: new Date(),
-    client: props.client?.name,
-    service: props.service?.name,
-  };
+
+  const { id } = useParams();
+
+  useEffect(() => {
+    const fetchBooking = async () => {
+      const oneBooking = await getOneBooking(id);
+      setBooking(oneBooking);
+    };
+    fetchBooking();
+  }, [id]);
 
   const handleDelete = async (e) => {
     e.preventDefault();
@@ -17,7 +25,6 @@ const Confirmation = (props) => {
     history.push("/home");
   };
 
-  let { id } = useParams();
 
   return (
     <Layout>
@@ -27,9 +34,9 @@ const Confirmation = (props) => {
           <div className="confirmation-container">
             <img src={props.client?.image_url} alt={props.client?.name} />
             <div className="confirmation-wrap">
-              <p>Name: {booking.client}</p>
-              <p>Appointment: {booking.date?.toString()}</p>
-              <p>Service: {booking?.service}</p>
+              <p>Name: {booking.client?.name}</p>
+              <p>Appointment: {new Date(booking.date).toLocaleString("en-us")}</p>
+              <p>Service: {booking.service?.name}</p>
               <div className="confirmation-btn-container">
                 <Link to={`/booking/${id}/edit`}>
                   <button id="btn-style">Edit</button>

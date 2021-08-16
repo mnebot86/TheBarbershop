@@ -10,7 +10,7 @@ before_action :authorize_request, only: [:update, :create, :destroy]
   end
 
   def show
-    render json: @booking, include: :client
+    render json: @booking, include: [:client, :service]
   end
 
   def create

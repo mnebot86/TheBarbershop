@@ -1,8 +1,11 @@
+.color {
+  transition: color 500ms ease-in;
+}
+.color:hover {
+  color: red;
+}
 
-.color{transition: color 500ms ease-in;}
-.color:hover { color: red; }
-
-.guest{
+.guest {
   border: none;
   background: inherit;
   color: #fff;
@@ -13,12 +16,17 @@
   animation: slide-right 800ms ease-in 250ms 1 forwards;
 }
 @keyframes slide-right {
-  from{opacity: 0; transform: translateX(100px);}
-  to{opacity: 1; transform: translateX(0);}
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-
-.splash{
+.splash {
   display: flex;
   position: absolute;
   top: 35%;
@@ -26,7 +34,7 @@
 }
 
 .splash-button {
-  background: #002E7E;
+  background: #002e7e;
   color: #ffff;
   font-size: 3rem;
   height: 6rem;
@@ -35,11 +43,17 @@
   animation: slide 800ms ease-in 250ms 1 forwards;
 }
 @keyframes slide {
-  from{opacity: 0; transform: translateX(-100px);}
-  to{opacity: 1; transform: translateX(0);}
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.splash-container{
+.splash-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,22 +63,28 @@
   height: 45vh;
   top: 30%;
 }
-.splash-title{
+.splash-title {
   color: white;
   font-size: 8rem;
   opacity: 0;
   z-index: 1;
-  
+
   animation: fade 800ms ease-in 250ms 1 forwards;
 }
 
 @keyframes fade {
-  from{opacity: 0; transform: translateY(-100px);}
-  to{opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 video {
   position: relative;
-  object-fit:cover;
+  object-fit: cover;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -72,16 +92,16 @@ video {
   left: 0;
   z-index: -1;
 }
-@media screen and (max-width: 1200px){
-  .guest{
+@media screen and (max-width: 1200px) {
+  .guest {
     border: none;
     background: inherit;
     color: #fff;
     font-weight: 700;
     font-size: 2.5rem;
   }
-  
-  .splash{
+
+  .splash {
     display: flex;
     position: absolute;
     top: 35%;
@@ -92,10 +112,10 @@ video {
     width: 15rem;
     height: 4.5rem;
     color: #ffff;
-    background: #002E7E;
+    background: #002e7e;
     font-size: 2.5rem;
   }
-  .splash-container{
+  .splash-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -105,16 +125,15 @@ video {
     height: 45vh;
     top: 30%;
   }
-  .splash-title{
+  .splash-title {
     z-index: 1;
     font-size: 6rem;
     color: white;
-    
   }
 
   video {
     position: relative;
-    object-fit:cover;
+    object-fit: cover;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -122,18 +141,17 @@ video {
     left: 0;
     z-index: -1;
   }
-
 }
-@media  screen and (max-width:1024px) {
-  .guest{
+@media screen and (max-width: 1024px) {
+  .guest {
     border: none;
     background: inherit;
     color: #fff;
     font-weight: 700;
     font-size: 2rem;
   }
-  
-  .splash{
+
+  .splash {
     display: flex;
     position: absolute;
     top: 35%;
@@ -144,10 +162,10 @@ video {
     width: 13rem;
     height: 4rem;
     color: #ffff;
-    background: #002E7E;
+    background: #002e7e;
     font-size: 2rem;
   }
-  .splash-container{
+  .splash-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -157,16 +175,15 @@ video {
     height: 40vh;
     top: 30%;
   }
-  .splash-title{
+  .splash-title {
     z-index: 1;
     font-size: 5rem;
     color: white;
-    
   }
 
   video {
     position: relative;
-    object-fit:cover;
+    object-fit: cover;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -175,32 +192,30 @@ video {
     z-index: -1;
   }
 }
-@media screen and (max-width:768px) {
-  .guest{
+@media screen and (max-width: 768px) {
+  .guest {
     border: none;
     background: inherit;
     color: #fff;
     font-weight: 700;
     font-size: 1.5rem;
   }
-  
-  .splash{
+
+  .splash {
     display: flex;
     position: absolute;
     top: 38%;
     left: 5%;
-    /* justify-content: center; */
-    /* align-items: center; */
   }
 
   .splash-button {
     width: 12rem;
     height: 3.5rem;
     color: #ffff;
-    background: #002E7E;
+    background: #002e7e;
     font-size: 1.5rem;
   }
-  .splash-container{
+  .splash-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -210,16 +225,15 @@ video {
     height: 35vh;
     top: 30%;
   }
-  .splash-title{
+  .splash-title {
     z-index: 1;
     font-size: 4rem;
     color: white;
-    
   }
 
   video {
     position: relative;
-    object-fit:cover;
+    object-fit: cover;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -229,15 +243,15 @@ video {
   }
 }
 @media screen and (max-width: 480px) {
-  .guest{
+  .guest {
     border: none;
     background: inherit;
     color: #fff;
     font-weight: 700;
     font-size: 1.3rem;
   }
-  
-  .splash{
+
+  .splash {
     display: flex;
   }
 
@@ -245,10 +259,10 @@ video {
     width: 10rem;
     height: 3rem;
     color: #ffff;
-    background: #002E7E;
+    background: #002e7e;
     font-size: 1.3rem;
   }
-  .splash-container{
+  .splash-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -258,16 +272,15 @@ video {
     height: 30vh;
     top: 30%;
   }
-  .splash-title{
+  .splash-title {
     z-index: 1;
     font-size: 3rem;
     color: white;
-    
   }
 
   video {
     position: relative;
-    object-fit:cover;
+    object-fit: cover;
     width: 100vw;
     height: 100vh;
     position: fixed;
