@@ -1,29 +1,11 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { MdClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
-import { useState, useEffect } from "react";
-import Menu from "../Menu/Menu";
+import { useState } from "react";
 import "./Nav.css";
 
 const Nav = (props) => {
   const [open, setOpen] = useState(false);
-  const [topNav, setTopNav] = useState(false);
-  const [hamburger, setHamburger] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 480) {
-        setTopNav(true);
-        setHamburger(false);
-      } else {
-        // setVisible(false);
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   const unauthenticated = (
     <>

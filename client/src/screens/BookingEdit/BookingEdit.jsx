@@ -22,7 +22,7 @@ useEffect(() => {
   };
   fetchBooking();
 
-},[])
+},[id])
 
   const handleChange = (e) => {
     const { value } = e.target;

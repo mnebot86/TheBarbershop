@@ -8,11 +8,7 @@ const Confirmation = (props) => {
   const [booking, setBooking]= useState({})
 
   const history = useHistory();
-  // const booking = {
-  //   date: new Date(),
-  //   client: props.client?.name,
-  //   service: props.service?.name,
-  // };
+
   const { id } = useParams();
 
   useEffect(() => {
@@ -21,7 +17,7 @@ const Confirmation = (props) => {
       setBooking(oneBooking);
     };
     fetchBooking();
-  }, []);
+  }, [id]);
 
   const handleDelete = async (e) => {
     e.preventDefault();

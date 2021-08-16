@@ -1,6 +1,5 @@
 import { Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Layout from "./components/Layout/Layout";
 import Splash from "./screens/Splash/Splash";
 import SignUp from "./screens/SignUp/SignUp";
 import SignIn from "./screens/SignIn/SignIn";
