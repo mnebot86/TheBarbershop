@@ -1,5 +1,6 @@
 .confirmation{
   display: flex;
+  flex-direction: column;
   min-width:100vw;
   min-height: 100vh;
   justify-content: center;
@@ -10,13 +11,13 @@
 
 .confirmation-container {
   display:flex;
-  width: 100%;
-  min-height: 60%;
+  min-width: 60%;
+  min-height: 50%;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 
 }
 .confirmation-title{
-margin: 3rem auto;
+margin: 0rem auto;
 text-align: center;
 font-size: 5rem;
 font-weight: bold;

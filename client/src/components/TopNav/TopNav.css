@@ -1,0 +1,25 @@
+.topNav {
+  display:flex;
+  justify-content: flex-end;
+  justify-content: space-between;
+
+  background: #002E7E;
+}
+.top-links{
+  color: #ffff;
+  margin: 0 1rem;
+}
+
+.top-user-name{
+  color: #ffff
+  
+}
+
+.navList{
+  display: flex;
+  font-size: 4rem;
+}
+.navTitle{
+  font-size: 4rem;
+  color: #ffff
+}

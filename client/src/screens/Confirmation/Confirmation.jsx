@@ -20,27 +20,33 @@ const Confirmation = (props) => {
   let { id } = useParams();
 
   return (
-    <div className="confirmation">
-      <Layout>
+    <Layout>
+      <div>
+        <div className="confirmation">
         <p className="confirmation-title">Confirmation</p>
-        <div className="confirmation-container">
-          <img src={props.client?.image_url} alt={props.client?.name} />
-          <div className="confirmation-wrap">
-            <p>Name: {booking.client}</p>
-            <p>Appointment: {booking.date?.toString()}</p>
-            <p>Service: {booking?.service}</p>
-            <div className="confirmation-btn-container">
-              <Link to={`/booking/${id}/edit`}>
-                <button id="btn-style">Edit</button>
-              </Link>
-              <button id="btn-style" type="submit" onClick={(e) => handleDelete(e)}>
-                Delete
-              </button>
+          <div className="confirmation-container">
+            <img src={props.client?.image_url} alt={props.client?.name} />
+            <div className="confirmation-wrap">
+              <p>Name: {booking.client}</p>
+              <p>Appointment: {booking.date?.toString()}</p>
+              <p>Service: {booking?.service}</p>
+              <div className="confirmation-btn-container">
+                <Link to={`/booking/${id}/edit`}>
+                  <button id="btn-style">Edit</button>
+                </Link>
+                <button
+                  id="btn-style"
+                  type="submit"
+                  onClick={(e) => handleDelete(e)}
+                >
+                  Delete
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </Layout>
-    </div>
+      </div>
+    </Layout>
   );
 };
 

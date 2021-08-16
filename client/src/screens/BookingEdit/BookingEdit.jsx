@@ -32,27 +32,39 @@ const BookingEdit = (props) => {
   };
 
   return (
-      <Layout>
-    <div className="bookingEdit">
+    <Layout>
+      <div className="bookingEdit">
         <div className="bookingEdit-container">
           <form className="bookingEdit-form" onSubmit={handleSubmit}>
-            <select value={props.service?.name} onChange={handleChange}>
-              {props.services.map((service) => (
-                <option value={service.id}>{service.name}</option>
-              ))}
-            </select>
-            <label htmlFor="date">Appointment: </label>
-            <DateTimePicker
-              onChange={onChange}
-              value={value}
-              name="date"
-              id="date"
-            />
-            <button type="submit">Submit</button>
+            <div></div>
+            <div className="bookingEdit-service">
+              <label className="bookingEdit-label" htmlFor="select">Service:  </label>
+              <select
+                id="select"
+                class="select"
+                value={props.service?.name}
+                onChange={handleChange}
+              >
+                {props.services.map((service) => (
+                  <option value={service.id}>{service.name}</option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label className="bookingEdit-label" htmlFor="date">Appointment:  </label>
+              <DateTimePicker
+                className="react-datetime-picker"
+                onChange={onChange}
+                value={value}
+                name="date"
+                id="date"
+              />
+            </div>
+            <button className="bookingEdit-btn" type="submit">Submit</button>
           </form>
         </div>
-    </div>
-      </Layout>
+      </div>
+    </Layout>
   );
 };
 

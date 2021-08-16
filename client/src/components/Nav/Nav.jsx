@@ -10,19 +10,19 @@ const Nav = (props) => {
 
   const unauthenticated = (
     <>
-      <Link to="/signup">Sign Up</Link>
+      <Link className="nav-link" to="/signup">Sign Up</Link>
 
-      <Link to="/login">Login</Link>
+      <Link className="nav-link" to="/login">Login</Link>
     </>
   );
 
   const authenticated = (
     <>
-      <Link to="/confirmation">Confirmation</Link>
+      <Link className="nav-link" to="/confirmation">Confirmation</Link>
 
-      <Link to="/signout">Sign Out</Link>
+      <Link className="nav-link" to="/signout">Sign Out</Link>
 
-      <li className="user-name">{props.client?.name}</li>
+      <li className="nav-user-name">{props.client?.name}</li>
     </>
   );
   const handleToggle = () => {
@@ -36,17 +36,18 @@ const Nav = (props) => {
  
   return (
     <div>
-      <nav className="navBar navBar2">
-        <button id='hamburger' onClick={handleToggle}>{open ? (<MdClose style={{ color: 
+      <nav className="navBar">
+        <button onClick={handleToggle}>{open ? (<MdClose style={{ color: 
         '#fff', width: "4rem", height: "4rem"}}/>
   ) : (
     <FiMenu style={{color: "#7b7b7b", width: "4rem", height: "4rem"}} />
   )}
   </button>
-        <ul id="menuNav2" className={`menuNav ${open ? "showMenu" : ""}`}>
+        <ul className={`menuNav ${open ? "showMenu" : ""}`}>
           <li>
             <Link
               to="/home"
+              className="nav-link"
               activeClassName="active-link"
               onClick={() => closeMenu()}
               exact
@@ -57,6 +58,7 @@ const Nav = (props) => {
           <li>
             <Link
               to="/services"
+              className="nav-link"
               activeClassName="active-link"
               onClick={() => closeMenu()}
               exact
