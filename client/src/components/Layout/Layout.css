@@ -1,6 +1,12 @@
-.navBar {
-  display:none;
+/* .navBar {
+display:none;
 }
-@media screen (480px) {
-  
-}
+
+@media screen and (max-width: 480px) {
+  .narBar {
+    display: block; 
+  }
+  .topNav {
+    display: none;
+  }
+}  */
