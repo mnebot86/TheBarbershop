@@ -14,12 +14,12 @@ import "./App.css";
 import { verify } from "./services/clients";
 import SignOut from "./screens/SignOut/SignOut";
 import { getAllServices } from "./services/services";
-import { getAllBookings } from "./services/bookings";
+
 
 function App() {
   const [service, setService] = useState({});
   const [client, setClient] = useState(null);
-  const [booking, setBooking] = useState([]);
+
 
   useEffect(() => {
     const fetchClient = async () => {
@@ -39,13 +39,6 @@ function App() {
     fetchServices();
   }, []);
 
-  useEffect(() => {
-    const fetchBooking = async () => {
-      const allBookings = await getAllBookings();
-      setBooking(allBookings);
-    };
-    fetchBooking();
-  }, []);
   return (
     <div>
       <Route exact path="/">
@@ -84,7 +77,7 @@ function App() {
         />
       </Route>
       <Route exact path="/confirmation/:id">
-        <Confirmation client={client} booking={booking} service={service} />
+        <Confirmation client={client} service={service} />
       </Route>
       <Route exact path="/booking/:id/edit">
         <BookingEdit
