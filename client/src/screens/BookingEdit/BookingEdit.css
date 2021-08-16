@@ -1,0 +1,26 @@
+.bookingEdit {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookingEdit-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 80vw;
+  min-height: 80vh;
+  border: 2px dashed red;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookingEdit-form {
+  display: flex;
+  flex-direction: column;
+  min-width: 60vw;
+  min-height: 60vh;
+  border: 2px dotted green;
+  justify-content: space-evenly;
+}

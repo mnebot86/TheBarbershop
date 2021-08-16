@@ -37,8 +37,9 @@ const Booking = (props) => {
             <div>
               <label htmlFor="date">Appointment: </label>
               <DateTimePicker
-                autoFocus
                 className="booking-input"
+                disableCalendar
+                disableClock
                 onChange={onChange}
                 value={value}
                 name="date"

@@ -11,10 +11,10 @@ function Splash() {
       <div className='splash-container'>
         <p className="splash-title">TheBarberShop</p>
         <Link to = "/signup">
-        <button className="sign-up splash-button color">Sign up</button>
+        <button className="splash-button color">Sign up</button>
         </Link>
         <Link to = "/login">
-        <button className="login splash-button color">Login</button>
+        <button className="splash-login splash-button color">Login</button>
         </Link>
         <Link to = "/home">
         <button className="guest color">Guest</button>
