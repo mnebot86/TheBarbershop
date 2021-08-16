@@ -1,17 +1,27 @@
 .topNav {
   display:flex;
+  padding: 1.5rem;
   justify-content: flex-end;
   justify-content: space-between;
-
   background: #002E7E;
+  box-shadow: 0 8px 6px -6px black;
 }
 .top-links{
   color: #ffff;
-  margin: 0 1rem;
+  margin: 0 4rem;
+  text-decoration: none;
+  list-style: none;
 }
+a:visited{
+  color: #fff;
+}
+a {
+  text-decoration: none;
 
+}
 .top-user-name{
-  color: #ffff
+  color: #ffff;
+  cursor: none;
   
 }
 

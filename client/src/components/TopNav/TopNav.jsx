@@ -15,7 +15,7 @@ const TopNav = (props) => {
 
   const authenticated = (
     <>
-      <Link className="top-links" to="/confirmation">Confirmation</Link>
+      {/* <Link className="top-links" to="/confirmation">Confirmation</Link> */}
 
       <Link className="top-links" to="/signout">Sign Out</Link>
 

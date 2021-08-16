@@ -27,8 +27,8 @@ const Booking = (props) => {
   };
 
   return (
-    <div className="booking">
       <Layout>
+    <div className="booking">
         <div className="booking-container">
           <form className="booking-form" onSubmit={handleSubmit}>
             <div className="booking-name">
@@ -51,8 +51,8 @@ const Booking = (props) => {
             </button>
           </form>
         </div>
-      </Layout>
     </div>
+      </Layout>
   );
 };
 

@@ -7,6 +7,23 @@ import "./Nav.css";
 
 const Nav = (props) => {
   const [open, setOpen] = useState(false);
+  const [topNav, setTopNav]= useState(false)
+  const [hamburger, setHamburger] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 480) {
+        setTopNav(true);
+        setHamburger(false);
+      } else {
+        // setVisible(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const unauthenticated = (
     <>

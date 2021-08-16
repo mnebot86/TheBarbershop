@@ -3,8 +3,8 @@ import Layout from "../../components/Layout/Layout";
 import "./Services.css";
 const Services = (props) => {
   return (
-    <div className="services">
       <Layout>
+    <div className="services">
         <div className="services-container">
           {props.services.map((service, index) => (
             <ServiceCard
@@ -18,8 +18,8 @@ const Services = (props) => {
             />
           ))}
         </div>
-      </Layout>
     </div>
+      </Layout>
   );
 };
 
