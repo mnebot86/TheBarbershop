@@ -31,7 +31,6 @@ const TopNav = (props) => {
       <p className="navTitle">TheBarberShop</p>
       <ul className="navList">
         <li>
-          {" "}
           <Link to="/home" className="top-links">
             Home
           </Link>

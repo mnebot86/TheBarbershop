@@ -16,7 +16,7 @@ const Detail = ({ setService, service, client }) => {
     fetchService();
   }, [id, setService]);
   return (
-    <Layout>
+    <Layout client={client}>
 ƒ<div className="details">
       <div className="details-container">
         <img src={service?.image_url} alt="haircuts" />

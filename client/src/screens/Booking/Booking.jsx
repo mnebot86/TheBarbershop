@@ -27,7 +27,7 @@ const Booking = (props) => {
   };
 
   return (
-      <Layout>
+      <Layout client={props.client}>
     <div className="booking">
         <div className="booking-container">
           <form className="booking-form" onSubmit={handleSubmit}>

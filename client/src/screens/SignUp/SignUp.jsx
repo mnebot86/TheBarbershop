@@ -32,8 +32,8 @@ const SignUp = (props) => {
 
   const { name, email, password, image_url } = form;
   return (
-    <div className="sign-up">
       <Layout>
+    <div className="sign-up">
         <form className="sign-up-form" onSubmit={onSignUp}>
           <div className="sign-up-inner">
             <div className="sign-up-name">
@@ -83,8 +83,8 @@ const SignUp = (props) => {
             <button type="submit">Sign Up</button>
           </div>
         </form>
-      </Layout>
     </div>
+      </Layout>
   );
 };
 export default SignUp;

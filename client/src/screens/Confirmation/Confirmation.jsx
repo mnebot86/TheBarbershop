@@ -27,7 +27,7 @@ const Confirmation = (props) => {
 
 
   return (
-    <Layout>
+    <Layout client={props.client}>
       <div>
         <div className="confirmation">
         <p className="confirmation-title">Confirmation</p>

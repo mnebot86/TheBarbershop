@@ -140,10 +140,10 @@ a {
   
   .navList{
     display: flex;
-    font-size:1.9rem;
+    font-size:1rem;
   }
   .navTitle{
-    font-size: 1.9rem;
+    font-size: 1rem;
     color: #ffff
   }
 }

@@ -3,7 +3,7 @@ import Layout from "../../components/Layout/Layout";
 import "./Services.css";
 const Services = (props) => {
   return (
-      <Layout>
+      <Layout client={props.client}>
     <div className="services">
         <div className="services-container">
           {props.services.map((service, index) => (

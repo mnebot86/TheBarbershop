@@ -13,6 +13,14 @@
   max-width: 145rem;
   max-height: 50rem;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  animation: bounce 2s ease-in-out 1 forwards;
+}
+
+@keyframes bounce {
+  from{transform: translateY(-1000px);}
+  33%{transform: translateY(0);}
+  66%{transform: translateY(-100px);}
+  to{transform: translateY(0px)}
 }
 
 img {
@@ -30,6 +38,7 @@ img {
   display: flex;
   flex-direction: column;
   font-size: 4rem;
+  /* font-family: 'Sawarabi Gothic', sans-serif; */
 }
 
 .details-btn {

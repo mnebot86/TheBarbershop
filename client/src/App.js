@@ -56,7 +56,7 @@ function App() {
         <Home client={client} setClient={setClient} />
       </Route>
       <Route exact path="/services">
-        <Services services={services} />
+        <Services client={client} setClient={setClient} services={services} />
       </Route>
       <Route exact path="/services/:id">
         <Detail
