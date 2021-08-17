@@ -52,3 +52,53 @@ font-weight: bold;
 img {
   width: 50%;
 }
+
+@media screen and (max-width: 480px) {
+  .confirmation-container {
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    min-width: 60%;
+    min-height: 50%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  
+  }
+  .confirmation-title{
+  margin: 0rem auto;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bold;
+  }
+  
+  .confirmation-wrap{
+    display:flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    align-items: baseline;
+    justify-content: space-evenly;
+    padding-left:2rem;
+  }
+  
+  .confirmation-btn-container{
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    
+  }
+  #btn-style{
+  
+    margin: 2rem auto;
+    width: 16rem;
+    height: 6rem;
+    font-size: 2rem;
+    color: #fff;
+    background: #002e7e;
+  }
+  
+  img {
+    margin:2rem auto;
+    width: 50%;
+  }
+}

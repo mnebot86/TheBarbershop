@@ -7,7 +7,7 @@ const Home = (props) => {
       <div className="homeBg">
         <div className="home-wordBg">
           <p className="home-word-wrap">
-            <span>TheBarberShop</span> is your one shop stop, for the freshes hair style and
+            <span>TheBarberShop</span> is your one stop shop, for the freshest hair styles and
             cuts.
           </p>
         </div>
