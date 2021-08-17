@@ -35,9 +35,9 @@ const Booking = (props) => {
               <p>Service: {props.service?.name}</p>
             </div>
             <div>
-              <label htmlFor="date">Appointment: </label>
+              <label className="booking-label" htmlFor="date">Appointment: </label>
               <DateTimePicker
-                className="booking-input"
+                className="react-datetime"
                 disableCalendar
                 disableClock
                 onChange={onChange}
@@ -46,7 +46,7 @@ const Booking = (props) => {
                 id="date"
               />
             </div>
-            <button id="booking-btn" type="submit">
+            <button id="bookingIt-btn" type="submit">
               Book It
             </button>
           </form>
