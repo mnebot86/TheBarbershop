@@ -13,8 +13,15 @@
   grid-template-rows: repeat(3, 1fr);
   flex-direction: column;
   flex-wrap: wrap;
+  opacity: 0;
   width: 75vw;
+  animation: slide-up .8s 1  ease-in-out forwards;
 }
+@keyframes slide-up {
+  from{opacity: 0; transform: translateY(1000px)}
+  to{opacity:1;}
+}
+
 @media screen and (max-width: 1200px) {
   .services-container {
     width: 75vw;

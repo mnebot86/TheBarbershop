@@ -18,16 +18,29 @@
   background: RGBA(0, 0, 0, 0.7);
   min-width: 60%;
   min-height: 60%;
+  opacity: 0;
+  animation: fade 1s 1  ease-in-out forwards;
+  font-family: 'Sawarabi Gothic', sans-serif;
+}
+@keyframes fade {
+  from{opacity: 0;}
+  to{opacity: 1;}
 }
 .home-word-wrap {
   min-width: 90%;
   color: #fff;
   font-size: 4rem;
   line-height: 1.5;
-  padding: 0 3rem
+  padding: 0 3rem;
+  animation: font 1s 1 ease-in-out;
 }
 
+@keyframes font {
+  from{transform: skewX(30deg) translate(-500px);}
+  to{transform: skewX(-30deg)}
+}
 span {
+  font-family: 'Sawarabi Mincho', sans-serif;
   font-style: italic;
 }
 
