@@ -42,7 +42,7 @@ useEffect(() => {
   };
 
   return (
-    <Layout>
+    <Layout client={props.client}>
       <div className="bookingEdit">
         <div className="bookingEdit-container">
           <form className="bookingEdit-form" onSubmit={handleSubmit}>

@@ -21,10 +21,6 @@ const Nav = (props) => {
 
   const authenticated = (
     <>
-      <Link className="nav-link" to="/confirmation">
-        Confirmation
-      </Link>
-
       <Link className="nav-link" to="/signout">
         Sign Out
       </Link>

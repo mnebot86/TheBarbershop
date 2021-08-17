@@ -6,6 +6,7 @@
 }
 
 .guest {
+  font-family: 'Sawarabi Gothic', sans-serif;
   border: none;
   background: inherit;
   color: #fff;
@@ -34,6 +35,7 @@
 }
 
 .splash-button {
+  font-family: 'Sawarabi Gothic', sans-serif;
   background: #002e7e;
   color: #ffff;
   font-size: 3rem;
@@ -41,7 +43,12 @@
   opacity: 0;
   width: 17rem;
   animation: slide 800ms ease-in 250ms 1 forwards;
+  
 }
+
+
+
+
 @keyframes slide {
   from {
     opacity: 0;
@@ -68,7 +75,7 @@
   font-size: 8rem;
   opacity: 0;
   z-index: 1;
-
+  font-family: 'Sawarabi Mincho', sans-serif;
   animation: fade 800ms ease-in 250ms 1 forwards;
 }
 
