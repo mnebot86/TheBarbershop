@@ -1,50 +1,47 @@
-.confirmation{
+.confirmation {
   display: flex;
   flex-direction: column;
-  min-width:100vw;
+  min-width: 100vw;
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-
-  
 }
 
 .confirmation-container {
-  display:flex;
+  display: flex;
   min-width: 60%;
   min-height: 50%;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-
 }
-.confirmation-title{
-margin: 0rem auto;
-text-align: center;
-font-size: 5rem;
-font-weight: bold;
+.confirmation-title {
+  margin: 0rem auto;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bold;
 }
 
-.confirmation-wrap{
-  display:flex;
+.confirmation-wrap {
+  display: flex;
   flex-direction: column;
-  font-size: 2rem;
+  font-size: 3rem;
   align-items: baseline;
   justify-content: space-evenly;
-  padding-left:2rem;
+  padding-left: 2rem;
+  width: 100%;
 }
 
-.confirmation-btn-container{
+.confirmation-btn-container {
   display: flex;
   align-self: center;
   flex-direction: column;
   margin-bottom: 2rem;
-  
 }
-#btn-style{
-
+#btn-style {
   margin: 2rem auto;
   width: 16rem;
   height: 6rem;
-  font-size: 2rem;
+  font-size: 3rem;
   color: #fff;
   background: #002e7e;
 }
@@ -55,40 +52,38 @@ img {
 
 @media screen and (max-width: 480px) {
   .confirmation-container {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: column;
     min-width: 60%;
     min-height: 50%;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  
   }
-  .confirmation-title{
-  margin: 0rem auto;
-  text-align: center;
-  font-size: 5rem;
-  font-weight: bold;
+  .confirmation-title {
+    margin: 0rem auto;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
   }
-  
-  .confirmation-wrap{
-    display:flex;
+
+  .confirmation-wrap {
+    display: flex;
     flex-direction: column;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    line-height: 1.5;
     align-items: baseline;
     justify-content: space-evenly;
-    padding-left:2rem;
+    padding-left: 1rem;
   }
-  
-  .confirmation-btn-container{
+
+  .confirmation-btn-container {
     display: flex;
     align-self: center;
     flex-direction: column;
     margin-bottom: 2rem;
-    
   }
-  #btn-style{
-  
+  #btn-style {
     margin: 2rem auto;
     width: 16rem;
     height: 6rem;
@@ -96,9 +91,9 @@ img {
     color: #fff;
     background: #002e7e;
   }
-  
+
   img {
-    margin:2rem auto;
+    margin: 2rem auto;
     width: 50%;
   }
 }

@@ -48,9 +48,9 @@ useEffect(() => {
           <form className="bookingEdit-form" onSubmit={handleSubmit}>
             <div></div>
             <div className="bookingEdit-service">
-              <label className="bookingEdit-label" htmlFor="select">
+              {/* <label className="bookingEdit-label" htmlFor="select">
                 Service:
-              </label>
+              </label> */}
               <select
                 id="select"
                 class="select"
@@ -63,9 +63,9 @@ useEffect(() => {
               </select>
             </div>
             <div>
-              <label className="bookingEdit-label" htmlFor="date">
+              {/* <label className="bookingEdit-label" htmlFor="date">
                 Appointment:
-              </label>
+              </label> */}
               <DateTimePicker
                 className="react-datetime-picker"
                 onChange={onChange}
