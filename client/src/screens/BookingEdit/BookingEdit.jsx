@@ -64,7 +64,7 @@ useEffect(() => {
             </div>
             <div>
               <label className="bookingEdit-label" htmlFor="date">
-                Appointment:{" "}
+                Appointment:
               </label>
               <DateTimePicker
                 className="react-datetime-picker"

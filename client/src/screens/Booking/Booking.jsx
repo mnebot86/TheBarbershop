@@ -38,8 +38,6 @@ const Booking = (props) => {
               <label className="booking-label" htmlFor="date">Appointment: </label>
               <DateTimePicker
                 className="react-datetime"
-                disableCalendar
-                disableClock
                 onChange={onChange}
                 value={value}
                 name="date"
