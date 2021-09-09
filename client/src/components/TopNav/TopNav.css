@@ -1,150 +1,145 @@
 .topNav {
-  display:flex;
+  display: flex;
   padding: 1.5rem;
   justify-content: flex-end;
   justify-content: space-between;
-  background: #002E7E;
+  background: #002e7e;
   box-shadow: 0 8px 6px -6px black;
 }
-.top-links{
+.top-links {
   color: #ffff;
   margin: 0 4rem;
   text-decoration: none;
   list-style: none;
+  transform-origin: right;
+  transition: 1s ease-in-out;
 }
-a:visited{
+a:visited {
   color: #fff;
 }
-a {
-  text-decoration: none;
 
+.top-links:hover {
+  text-decoration: underline red;
 }
-.top-user-name{
+
+.top-user-name {
   color: #ffff;
   cursor: none;
-  
 }
 
-.navList{
+.navList {
   display: flex;
   font-size: 4rem;
 }
-.navTitle{
+.navTitle {
   font-size: 4rem;
-  color: #ffff
+  color: #ffff;
 }
-
 
 @media screen and (max-width: 1200px) {
   .topNav {
-    display:flex;
+    display: flex;
     padding: 1.5rem;
     justify-content: flex-end;
     justify-content: space-between;
-    background: #002E7E;
+    background: #002e7e;
     box-shadow: 0 8px 6px -6px black;
   }
-  .top-links{
+  .top-links {
     color: #ffff;
     margin: 0 4rem;
     text-decoration: none;
     list-style: none;
   }
-  a:visited{
+  a:visited {
     color: #fff;
   }
   a {
     text-decoration: none;
-  
   }
-  .top-user-name{
+  .top-user-name {
     color: #ffff;
     cursor: none;
-    
   }
-  
-  .navList{
+
+  .navList {
     display: flex;
-    font-size:3rem;
-  }
-  .navTitle{
     font-size: 3rem;
-    color: #ffff
+  }
+  .navTitle {
+    font-size: 3rem;
+    color: #ffff;
   }
 }
 @media screen and (max-width: 1024px) {
   .topNav {
-    display:flex;
+    display: flex;
     padding: 1.5rem;
     justify-content: flex-end;
     justify-content: space-between;
-    background: #002E7E;
+    background: #002e7e;
     box-shadow: 0 8px 6px -6px black;
   }
-  .top-links{
+  .top-links {
     color: #ffff;
     margin: 0 4rem;
     text-decoration: none;
     list-style: none;
   }
-  a:visited{
+  a:visited {
     color: #fff;
   }
   a {
     text-decoration: none;
-  
   }
-  .top-user-name{
+  .top-user-name {
     color: #ffff;
     cursor: none;
-    
   }
-  
-  .navList{
+
+  .navList {
     display: flex;
-    font-size:2.3rem;
-  }
-  .navTitle{
     font-size: 2.3rem;
-    color: #ffff
+  }
+  .navTitle {
+    font-size: 2.3rem;
+    color: #ffff;
   }
 }
 
 @media screen and (max-width: 769px) {
   .topNav {
-    display:flex;
+    display: flex;
     padding: 1.5rem;
     justify-content: flex-end;
     justify-content: space-between;
-    background: #002E7E;
+    background: #002e7e;
     box-shadow: 0 8px 6px -6px black;
   }
-  .top-links{
+  .top-links {
     color: #ffff;
     margin: 0 4rem;
     text-decoration: none;
     list-style: none;
   }
-  a:visited{
+  a:visited {
     color: #fff;
   }
   a {
     text-decoration: none;
-  
   }
-  .top-user-name{
+  .top-user-name {
     color: #ffff;
     cursor: none;
-    
   }
-  
-  .navList{
+
+  .navList {
     display: flex;
-    font-size:1rem;
-  }
-  .navTitle{
     font-size: 1rem;
-    color: #ffff
+  }
+  .navTitle {
+    font-size: 1rem;
+    color: #ffff;
   }
 }
 @media screen and (max-width: 480px) {
