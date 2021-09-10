@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_09_232850) do
+ActiveRecord::Schema.define(version: 2021_09_10_000022) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 2021_09_09_232850) do
     t.bigint "service_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "barber_id"
+    t.index ["barber_id"], name: "index_bookings_on_barber_id"
     t.index ["client_id"], name: "index_bookings_on_client_id"
     t.index ["service_id"], name: "index_bookings_on_service_id"
   end
@@ -50,8 +52,12 @@ ActiveRecord::Schema.define(version: 2021_09_09_232850) do
     t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "barber_id"
+    t.index ["barber_id"], name: "index_services_on_barber_id"
   end
 
+  add_foreign_key "bookings", "barbers"
   add_foreign_key "bookings", "clients"
   add_foreign_key "bookings", "services"
+  add_foreign_key "services", "barbers"
 end
